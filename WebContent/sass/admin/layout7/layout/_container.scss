@@ -1,0 +1,61 @@
+/*--------------------------------------------------
+    [Container]
+----------------------------------------------------*/
+
+.page-container-bg-solid {
+    background: #f1f3fa !important;
+}
+
+.container-lf-space {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/*** Breadcrumbs ***/
+.breadcrumbs {
+    background: $widget-color-white;
+    overflow: hidden;
+    padding: 30px 15px;
+    margin-bottom: 35px;
+
+    .breadcrumbs-title {
+        float: left;
+        font-size: 20px;
+        color: $widget-color-title;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .breadcrumbs-list {
+        float: right;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+
+        > li {
+            display: inline-block;
+            font-size: 14px;
+
+            > a {
+                color: $widget-color-title-light;
+
+                &:hover {
+                    color: $widget-color-blue;
+                    text-decoration: none;
+                }
+            }
+
+            + li {
+                &:before {
+                    position: relative;
+                    top: -2px;
+                    font-size: 6px;
+                    padding: 0 8px 0 5px;
+                    color: $widget-color-title-light;
+                    content: "\f111";
+                    font-family: FontAwesome;
+                }
+            }
+        }
+    }
+} 

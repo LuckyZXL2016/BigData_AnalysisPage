@@ -1,0 +1,78 @@
+// Layout Settings & Variables
+
+//##  Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$color-white:            												#fff !default;
+$color-snow:            												#f9f9f9 !default;
+$color-blue:            												#009dc7 !default;
+$color-default:            												#2f373e !default;
+$color-dark-gray:            											#384047 !default;
+
+// Header
+$header-width-height:                                   				60px; 
+$header-height:             				            				75px  !default; // header height on table and desktop view. default: 42px
+$header-line-height:                                   					27px; 
+$header-search-width:		                                   			250px; 
+$header-search-expand-width:		                                   	330px; 
+$header-search-text-size:		                                   		15px; 
+
+// Quick Sidebar
+$quick-sidebar-width:                                                   320px !default; // expandable nav width. default: 300px;  
+$quick-sidebar-tab-item-padding:										15px 15px;       // quick sidebar item padding. default: 15px 15px;
+$quick-siderbar-width-height:											45px; 
+
+$quick-sidebar-bg-color:												#21282e; 
+$quick-sidebar-font-color:												lighten($quick-sidebar-bg-color, 40%);
+
+// Dropdown Ajax Color
+$dropdown-ajax-color:		                                   			#a6b2bd !default; 
+
+// Sidebar
+$sidebar-width:             											235px !default; // sidebar width. default:235px
+$sidebar-toggler-width:		                             				20px; 
+$sidebar-toggler-height:	                            				14px;
+$sidebar-toggler-margin:                         						($header-height - $sidebar-toggler-height - 1px) / 2 0 0 0 !default;
+$sidebar-responsive-toggler-margin:                      				($header-height - $sidebar-toggler-height) / 2 14px 0 6px !default; 
+$sidebar-collapsed-width:   											54px  !default; // minimized/collapsed sidebar width. default:35px
+$sidebar-collapsed-submenu-width-on-hover:								($sidebar-width - 1) !default; // sub menu width displayed on hover in collapsed sidebar mode. default:210px
+$sidebar-logo-container-width:  										($sidebar-width + 30) !default; // logo container width. Normally same with sidebar-width.
+$sidebar-logo-container-width-xs: 										110px !default; // logo container width in mobile portrait view. default:110px.
+$sidebar-logo-container-width-xxs: 										100px !default; // logo container width in mobile landspace view. default:100px.
+
+$sidebar-menu-link-font-size:                                           14px !default;
+$sidebar-menu-link-font-weight:                                         400 !default;        
+$sidebar-menu-link-icon-font-size:                                      18px !default;
+$sidebar-menu-link-arrow-font-size:                                     13px !default;
+$sidebar-menu-sub-menu-link-icon-font-size:                             16px !default;
+
+
+//## Media queries breakpoints
+//
+//Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+$screen-xs-min:                											480px !default;
+
+// Small screen / tablet
+$screen-sm-min:                											768px !default;
+
+// Medium screen / desktop
+$screen-md-min:                											992px !default;
+
+// Large screen / wide desktop
+$screen-lg-min:                											1200px !default;
+
+// Large scree / wider desktop      
+$screen-lg-med:                     									1260px !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:             											($screen-sm-min - 1) !default;
+$screen-sm-max:                											($screen-md-min - 1) !default;
+$screen-md-max:                											($screen-lg-min - 1) !default;
+
+// Z-index master list
+$zindex-quick-sidebar:                                                  9999 !default;
+$zindex-sidebar-fixed:     												10000 !default; 
+$zindex-sidebar-submenu:   												2000 !default; 

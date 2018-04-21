@@ -1,0 +1,42 @@
+/***
+Page footer
+***/
+
+.page-footer {
+    .page-footer-copyright {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .page-footer-inner {
+        padding-top: 15px; 
+        padding-bottom: 15px; 
+    }
+}
+
+/* Scroll Top Top */
+.go2top {
+    display: inline-block;
+    padding: 1px; 
+    text-align:center; 
+    position:fixed;
+    bottom: 3px;    
+    z-index: 1000;
+    display:none;
+    right: 10px;
+
+    > i {
+        display: inline-block;
+        color: darken(#94A0B2, 15%);
+        font-size: 30px;
+        @include opacity(0.6);
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        > i {
+            @include opacity(1);
+        }
+    }
+}

@@ -1,0 +1,39 @@
+// Layout Settings & Variables
+
+// Header
+$header-height:                                                         70px  !default; // header height on table and desktop view. default: 42px
+$header-nav-item-padding:                                               0 10px  !default; // header nav item padding space on table and desktop view. default: 10px 15px
+$header-nav-item-padding-mobile:                                        0 2px  !default; // header nav item padding space on table and desktop view. default: 10px 15px
+
+$header-top-menu-burger-trigger:                                        26px 20px  !default; // header height on table and desktop view. default: 42px
+$header-top-menu-line-height:                                           69px  !default; // header height on table and desktop view. default: 42px
+$header-top-menu-user-font-size:                                        13px !default;
+$header-top-menu-user-font-weight:                                      300 !default;
+$header-top-menu-user-dropdown-link-font-size:                          14px !default;
+$header-top-menu-user-dropdown-link-font-weight:                        300 !default;
+
+$header-top-menu-avatar-img:                                            45px !default;
+$header-top-menu-avatar-img-mobile:                                     35px !default;
+
+$header-top-menu-item-color:                                            #acc1da !default;
+$header-top-menu-item-color-hover:                                      #c0cddc !default;
+
+//##  Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// Quick Sidebar
+$quick-sidebar-width:                                                   320px !default; // expandable nav width. default: 300px;  
+$quick-sidebar-tab-item-padding:										15px 15px;       // quick sidebar item padding. default: 15px 15px;
+$quick-siderbar-width-height:											45px; 
+
+$quick-sidebar-bg-color:												#21282e; 
+$quick-sidebar-font-color:												lighten($quick-sidebar-bg-color, 40%);
+
+// Page footer
+$page-footer-height:                                                    40px !default;
+
+// Z-index master list
+$zindex-header-fixed:                                                   9995 !default;
+$zindex-quick-sidebar:                                                  9994 !default;
+$zindex-go-to-top:                                                      10001 !default; 

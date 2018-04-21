@@ -1,0 +1,158 @@
+/*--------------------------------------------------
+    [PAGE SIDEBAR]
+----------------------------------------------------*/
+
+/* Page Siderbar */
+.page-sidebar {
+    float: left;
+    margin-top: 2px;
+
+    /* Navbar Toggle */
+    .navbar-toggle {
+        border: none;
+        padding-right: 0;
+        margin: 8px 0 7px 20px;
+
+        .icon-bar {
+            width: 25px;
+            background: #606d78;
+
+            + .icon-bar {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    /* Navbar Collapse */
+    .nav-collapse {
+        h3 {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.4;
+            margin: 0 0 15px;
+            text-transform: uppercase;
+            color: $text-dark-blue-color;
+            font-family: 'Oswald', sans-serif;    
+        }
+
+        /* Navbar Nav */
+        .navbar-nav {
+            > li {
+                margin-top: 2px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                > a {
+                    color: #6c7b88;
+                    font-size: 14px;
+                    font-weight: 600;
+                    padding: 10px 20px;
+                    background: #f4f7f8;
+                    text-transform: uppercase;
+                    @include border-radius(2px);
+
+                    > i {
+                        color: #5c7b88;
+                        margin-right: 7px;
+                    }
+
+                    .label {
+                        font-size: 11px;
+                        margin: 1px 0 0;
+                        float: right !important;
+                    }
+
+                    .badge {
+                        margin-top: 1px;
+                        float: right !important;
+                    }
+
+                    &:hover {
+                        color: $text-white-color;
+                        background: $bg-blue-color;
+
+                        > i {
+                            color: $text-white-color;
+                        }
+                    }
+                }
+            }
+
+            li.active {
+                > a {
+                    color: $text-white-color;
+                    background: $bg-blue-color;
+
+                    > i {
+                        color: $text-white-color;
+                    }
+                }
+            }
+        }
+
+        .navbar-nav.margin-bottom-35 {
+            margin-bottom: 35px;
+        }
+    }
+}
+
+/* Material Design */
+.page-md {
+    .page-sidebar {
+        .navbar-nav {
+            box-shadow: 0px 2px 5px 2px rgba(0,0,0,.1);
+        }
+    }
+}
+
+/* Page Siderbar List Style for above 767px */
+@media (min-width: $screen-sm-min) {  /* 767px */
+    .page-sidebar {
+        /* Navbar */
+        .navbar {
+            float: left;
+            width: 225px;
+            height: 100%;
+            z-index: 999;
+        }
+
+        /* Navbar Collapse */
+        .nav-collapse {
+            padding: 0;
+            height: auto;
+            border-top: 0;
+            box-shadow: none;
+            max-height: none;
+        }
+
+        .navbar-collapse.collapse {
+            width: auto !important;
+            display: block !important;
+            overflow: visible !important;
+        }
+
+        .navbar-collapse.in {
+            overflow-x: visible;
+        }
+
+        .navbar-nav,
+        .navbar-nav > li,
+        .navbar-left,
+        .navbar-right,
+        .navbar-header {
+            float: none !important;
+        }
+    }
+}
+
+/* Page Container Stylesheet design for above 768px */
+@media (min-width: $screen-sm-min) {  /* 768px */
+    /* Page Container */
+    .page-container {
+        margin-left: 225px;
+        padding: 4px 6px 0 30px;
+        overflow: hidden;
+    }
+}

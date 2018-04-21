@@ -1,0 +1,57 @@
+// Layout Settings & Variables
+
+//##  Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$text-white-color:            											#fff !default;
+$text-snow-color:            											#f9f9f9 !default;
+$text-blue-color:            											#009dc7 !default;
+$text-dark-blue-color:            										#2a3239 !default;
+$text-dark-gray-color:            										#4b5761 !default;
+$bg-white-color:            											#fff !default;
+$bg-snow-color:            												#f9f9f9 !default;
+$bg-blue-color:            												#009dc7 !default;
+$bg-dark-blue-color:            										#2a3239 !default;
+$bg-dark-gray-color:            										#4b5761 !default;
+
+// Quick Sidebar
+
+$quick-sidebar-width:                                                   320px !default;  // quick sidebar width. default: 245px;  
+$quick-sidebar-tab-item-padding:										15px 15px;       // quick sidebar item padding. default: 15px 15px;
+
+$quick-sidebar-bg-color:												#21282e; 
+$quick-sidebar-font-color:												lighten($quick-sidebar-bg-color, 40%);
+
+// Header
+
+$header-user-activity-width:                                   			35px; 
+$header-user-activity-height:                                   		35px; 
+
+
+//## Media queries breakpoints
+//
+//Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+$screen-xs-min:                											480px !default;
+
+// Small screen / tablet
+$screen-sm-min:                											768px !default;
+
+// Medium screen / desktop
+$screen-md-min:                											992px !default;
+
+// Large screen / wide desktop
+$screen-lg-min:                											1200px !default;
+
+// Large scree / wider desktop      
+$screen-lg-med:                     									1260px !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:             											($screen-sm-min - 1) !default;
+$screen-sm-max:                											($screen-md-min - 1) !default;
+$screen-md-max:                											($screen-lg-min - 1) !default;
+
+// Z-index master list
+$zindex-quick-sidebar:                                                  9999 !default;

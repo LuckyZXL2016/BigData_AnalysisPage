@@ -1,0 +1,25 @@
+/*--------------------------------------------------
+    [PLACEHOLDER]
+----------------------------------------------------*/
+
+@mixin placeholder($color: $input-color-placeholder) {
+  &:-moz-placeholder            { color: $color; } // Firefox 4-18
+  &::-moz-placeholder           { color: $color; } // Firefox 19+
+  &:-ms-input-placeholder       { color: $color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}
+
+
+/*--------------------------------------------------
+    [TRANSITION]
+----------------------------------------------------*/
+
+/* Cubic Bezier Transition */
+@mixin cubic-transition ($delay, $duration, $property) {
+    transition: {
+        duration: $duration;
+        property: $property;
+        timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+    } 
+}
+

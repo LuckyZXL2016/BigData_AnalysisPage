@@ -1,0 +1,11 @@
+//## Main Layout CSS Builder
+
+@import '../../global/_variables'; // global metronic framework variables
+@import '../../global/components/_mixins'; // global metronic framework mixings
+
+@import '_variables'; // variables             
+   
+@import 'layout/_container'; // page container             
+@import 'layout/_header'; // page header             
+@import 'layout/_footer'; // page footer             
+@import 'layout/_quick-sidebar';  // page sidebar 

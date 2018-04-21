@@ -1,0 +1,40 @@
+/*--------------------------------------------------
+    [Copyright]
+----------------------------------------------------*/
+
+.copyright {
+    color: #55616b;
+    margin: 20px 0 10px;
+    text-align: center;
+
+    a {
+        z-index: 1;
+        position: relative;  
+    }
+}
+
+@media (min-width: $screen-xs-min) { /* 480px */
+    .copyright {
+        left: 0;
+        right: 0;
+        bottom: 5px;
+        position: absolute;
+    }
+}
+
+
+/*--------------------------------------------------
+    [Copyright v2]
+----------------------------------------------------*/
+
+.copyright-v2 {
+    color: #55616b;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 0;
+    background: $color-white;
+
+    a {
+        z-index: 1;
+    }
+}

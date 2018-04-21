@@ -1,0 +1,15 @@
+/*--------------------------------------------------
+	[Copyright]
+----------------------------------------------------*/
+
+.copyright {
+	color: #bbb;
+	margin-bottom: 5px;
+}
+
+/* Stylesheet design for under max-width: 991px */
+@media (max-width: $screen-sm-max) {  /* 991px */
+	.copyright {
+		margin-bottom: 15px;
+	}
+}

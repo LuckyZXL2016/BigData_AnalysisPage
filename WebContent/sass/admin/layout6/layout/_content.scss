@@ -1,0 +1,383 @@
+/*--------------------------------------------------
+	[PAGE CONTENT]
+----------------------------------------------------*/
+
+/* Body */
+body {
+    background: $color-default url(../../../../assets/admin/layout6/img/bg_01.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+html {
+    height: 100%;
+}
+
+/* Go2top */
+.go2top i,
+.go2top i:focus {
+    right: 20px;
+    bottom: 25px;
+    width: 38px;
+    height: 38px;
+    z-index: 999;
+    line-height: 1;
+    font-size: 35px;
+    position: fixed;
+    color: $color-dark-gray;
+}
+
+/* Go2top under Page boxed */
+.page-boxed {
+    .go2top i {
+        right: 51px;
+    }
+}
+
+/* Page Boxed */
+@media (min-width: 1300px) {
+    .page-boxed {
+        .container {
+            width: 1270px;
+        }
+    }
+}
+
+
+/*--------------------------------------------------
+    [Center Aligned Content]
+----------------------------------------------------*/
+
+/* Set displays an element as in inline-level flex container */
+@media (min-width: $screen-sm-min) { /* 768px */
+    .center-wrap {
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 700px;
+        height: 100%;
+        margin: 0 auto;
+        display: block;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    .center-align {
+        width: 100%;
+        height: 100%;
+        display: table;
+    }
+
+    .center-body {
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+
+/*--------------------------------------------------
+    [Webapp Button]
+----------------------------------------------------*/
+
+@media (max-width: $screen-sm-max) {  /* 991px */
+    .sm-margin-bottom-30 {
+        margin-bottom: 30px;
+    }
+}
+
+.webapp-btn {
+    width: 100%;
+    display: block;
+    text-align: left;
+    padding: 11px 15px;
+	border: 1px solid $color-dark-gray;
+
+	h3 {
+		margin: 0;
+		font-size: 50px;
+		font-weight: 500;
+		line-height: 1.4;
+		color: $color-blue;
+		text-transform: uppercase;
+		font-family: 'Oswald', sans-serif;
+	}
+
+	p {
+		color: #586978;
+		font-size: 17px;
+        margin-bottom: 0;
+        text-transform: capitalize;
+	}
+
+    &:focus,
+	&:hover {
+		text-decoration: none;
+		background: $color-blue;
+		border-color: $color-blue;
+        @include cubic-transition($delay: 0, $duration:300ms, $property: (all));
+
+		h3,
+		p {
+			color: $color-white;
+		}
+	}
+}
+
+/* Media Queries */
+@media (max-width: $screen-md-min) {  /* 992px */
+    .webapp-btn {
+        h3 {
+            font-size: 30px;
+        }
+    }
+}
+
+
+/*--------------------------------------------------
+    [Page Content Popup]
+----------------------------------------------------*/
+
+.page-content.page-content-popup {
+    background: $color-white;
+}
+
+/* Set space for content */
+@media (max-width: $screen-xs-min) { /* 480px */
+    .page-content.page-content-popup {
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: $screen-xs-max) { /* 767px */
+    .page-content.page-content-popup {
+        margin-top: 20px;
+    }
+}
+
+
+/*--------------------------------------------------
+    [Page Content]
+----------------------------------------------------*/
+
+/* Page Content */
+.page-content {
+    margin: 20px 0;
+    overflow: hidden;
+
+    .page-content-fixed-header {
+        width: 100%;
+        background: $color-white;
+        border-bottom: 1px solid #efefef;
+
+        &:before,
+        &:after {
+            display: table;
+            content: " ";
+        }
+
+        &:after {
+            clear: both;
+        }
+
+        /* Page Breadcrumb */
+        .page-breadcrumb {
+            float: left;
+            list-style: none;
+            margin-bottom: 0;
+            padding-left: 20px;
+
+            > li {
+                margin: 0;
+                color: #6c7984;
+                font-size: 22px;
+                padding: 12px 0;
+                font-weight: 200;
+                white-space: pre-line;
+                display: inline-block;
+
+                + li {
+                    &:before {
+                        position: relative;
+                        top: -5px;
+                        font-size: 6px;
+                        padding: 0 7px 0 5px;
+                        color: $dropdown-ajax-color;
+                        content: "\f111";
+                        font-family: FontAwesome;
+                    }
+                }
+
+                > a {
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                .page-breadcrumb-link {
+                    color: darken(#6c7984, 40%);
+                }
+            }
+        }
+        
+        /* Content Header Menu */
+        .content-header-menu {
+            float: right;
+
+            /* Menu Toggler */
+            .menu-toggler {
+                float: left;
+                display: none;
+                border: none;
+                padding: 20px 15px;
+                background: $color-white;
+                border-left: 1px solid #efefef;
+
+                &:focus {
+                    outline: 0;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    
+                    .icon-bar {
+                        background: $color-blue;
+                    }
+                }
+
+                .icon-bar {
+                    width: 21px;
+                    height: 2px;
+                    display: block;
+                    background: $dropdown-ajax-color;
+
+                    + .icon-bar {
+                        margin-top: 5px;
+                    }
+                }
+            }
+
+            /* Dropdown Ajax Menu */
+            .dropdown-ajax-menu {
+                margin: 0;
+                padding: 0;
+                display: inline;
+                position: relative;
+                vertical-align: inherit;
+
+                .btn {
+                    border-radius: 0;
+                    background: $color-white;
+                    padding: 16px 30px 17px;
+                    border-left: 1px solid #efefef;
+
+                    &:hover {
+                        i {
+                            color: $color-blue;
+                        }
+                    }
+
+                    i {
+                        height: 8px;
+                        font-size: 5px;
+                        line-height: 2;
+                        display: block;
+                        color: $dropdown-ajax-color;
+                    }
+                }
+
+                .dropdown-menu-v2 {
+                    margin-top: 70px;
+                }
+            }
+        }
+    }
+}
+
+/* Material Design */
+.page-md {
+    .content-header-menu {
+        .dropdown-ajax-menu {
+            .btn {
+                box-shadow: none;
+                border-left: 1px solid #efefef !important;
+            }
+        }
+    }
+}
+
+/* Stylesheet design for max-width: 991px */
+@media (max-width: $screen-sm-max) {  /* 991px */
+    /* Page content */
+    .page-content {
+        .page-content-fixed-header {
+            .page-breadcrumb {
+                > li {
+                    font-size: 18px;
+
+                    + li {
+                        &:before {
+                            top: -3px;
+                        }
+                    }
+                }
+            }
+
+            /* Content Header Menu */
+            .content-header-menu {
+                .dropdown-ajax-menu {
+                    .btn {
+                        padding: 13px 21px;
+                    }
+                }
+
+                .menu-toggler {
+                    display: block;
+                    padding: 17px 13px;
+
+                    .icon-bar {
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Stylesheet design for under max-width: 479px */
+@media (max-width: $screen-xs-min - 1) { /* 479px */
+    /* Page Content */
+    .page-content {
+        .page-content-fixed-header {
+            .page-breadcrumb {
+                > li {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+/*--------------------------------------------------
+    [Page Fixed  Main Content]
+----------------------------------------------------*/
+
+.page-content {
+    .page-fixed-main-content {
+        padding: 20px;
+    }
+}
+
+/* Stylesheet design for min-width: 992px */
+@media (min-width: $screen-md-min) {  /* 992px */
+    /* Page fixed main content */
+    .page-content {
+        .page-fixed-main-content {
+            overflow: hidden;
+            margin-left: $sidebar-width + 20;
+        }
+    }
+}
+

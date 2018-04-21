@@ -1,0 +1,141 @@
+/*--------------------------------------------------
+	[PAGE CONTENT]
+----------------------------------------------------*/
+
+/* Body */
+body {
+	font-size: 14px;
+	background: #2f373e;
+}
+
+/* Go2top */
+.go2top i,
+.go2top i:focus {
+	right: 27px;
+	bottom: 52px;
+	width: 38px;
+	height: 38px;
+	z-index: 999;
+	line-height: 1;
+	font-size: 35px;
+	position: fixed;
+	color: $bg-dark-gray-color;
+}
+
+.page-portlet-fullscreen {
+	.go2top i {
+		z-index: -1;
+	}
+}
+
+/* Wrapper for above 991px */
+@media (min-width: $screen-sm-max) {  /* 991px */
+	.wrapper {
+		margin: 10px;
+	}
+}
+
+/* Page Content */
+.page-content {
+	padding: 30px;
+	min-height: 500px;
+	margin-bottom: 15px;
+	background: $bg-white-color;
+}
+
+@media (max-width: $screen-md-min) {  /* 992px */
+	.page-content {
+		margin-top: -1px;
+	}
+}
+
+@media (min-width: $screen-md-min) {  /* 991px */
+	.page-content {
+		margin-top: -4px;
+		padding-top: 105px;
+		position: relative;
+		@include border-top-right-radius(2px);
+		@include border-bottom-left-radius(2px);
+		@include border-bottom-right-radius(2px);
+	}
+}
+
+
+/*--------------------------------------------------
+	[BREADCRUMBS]
+----------------------------------------------------*/
+
+.breadcrumbs {
+	overflow: hidden;
+    margin-bottom: 30px;
+    padding-right: 6px;
+
+	h1 {
+		margin: 0;
+		float: left;
+		font-size: 22px;
+		font-weight: 500;
+		line-height: 1.4;
+		margin-right: 20px;
+		text-transform: uppercase;
+		color: $text-dark-blue-color;
+		font-family: 'Oswald', sans-serif;
+	}
+
+	.breadcrumb {
+		margin: 0;
+		padding: 0;
+		text-align: right;
+		background: inherit;
+
+		> li {
+			font-size: 13px;
+
+			+ li {
+				&:before {
+					top: 2px;
+					color: #dfe4e6;
+					font-size: 20px;
+					content: "\2022";
+					position: relative;
+					padding: 0 8px 0 5px;
+				}
+			}
+
+			> a {
+				color: #6c7b88;
+				text-transform: uppercase;
+
+				&:hover {
+					text-decoration: none;
+					color: $text-blue-color;
+				}
+			}
+		}
+		li.active {
+			color: $text-blue-color;
+			text-transform: uppercase;
+		}
+	}
+}
+
+@media (max-width: $screen-sm-min) {  /* 768px */
+	.breadcrumbs {
+		overflow: hidden;
+		text-align: left;
+		margin-bottom: 10px;
+
+		h1 {
+			float: none;
+			margin-bottom: 20px;
+		}
+
+		.breadcrumb {
+			text-align: left;
+		}
+	}
+}
+
+
+
+
